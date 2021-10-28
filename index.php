@@ -5,8 +5,8 @@ use Screen\Capture;
 $url = '';
 $message = '';
 
-if (isset($_POST['url']) && !empty($_POST['url'])) {
-    $url = $_POST['url'];
+if (isset($_GET['url']) && !empty($_GET['url'])) {
+    $url = $_GET['url'];
 
     $screen = new Capture($url);
     
@@ -40,7 +40,7 @@ if (isset($_POST['url']) && !empty($_POST['url'])) {
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                <form class="form-horizontal" action="index.php" method="post">
+                <form class="form-horizontal" action="index.php" method="get">
                     <fieldset>
                         <div id="legend">
                             <legend>
